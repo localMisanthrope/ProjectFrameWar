@@ -1,0 +1,55 @@
+Mods: {
+	ProjectFrameWar: {
+		Items: {
+			AlloyPlate: {
+				DisplayName: Alloy Plate
+				Tooltip: ""
+			}
+
+			ControlModule: {
+				DisplayName: Control Module
+				Tooltip: ""
+			}
+
+			Ferrite: {
+				DisplayName: Ferrite
+				Tooltip: ""
+			}
+
+			Morphics: {
+				DisplayName: Morphics
+				Tooltip: ""
+			}
+
+			NeuralSensors: {
+				DisplayName: Neural Sensors
+				Tooltip: ""
+			}
+
+			OrokinCell: {
+				DisplayName: Orokin Cell
+				Tooltip: ""
+			}
+
+			Plastids: {
+				DisplayName: Plastids
+				Tooltip: ""
+			}
+
+			PolymerBundle: {
+				DisplayName: Polymer Bundle
+				Tooltip: ""
+			}
+
+			Rubedo: {
+				DisplayName: Rubedo
+				Tooltip: ""
+			}
+
+			Salvage: {
+				DisplayName: Salvage
+				Tooltip: ""
+			}
+		}
+	}
+}

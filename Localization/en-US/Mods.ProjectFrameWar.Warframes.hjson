@@ -1,0 +1,9 @@
+Frame_Part_Format: The {0} component of the {1} Warframe.
+
+SetBonus_Excalibur: Enabled the Excalibur Warframe.
+
+Excalibur: {
+	FrameName: Excalibur
+	FrameDescription: Excalibur epitomizes the warrior spirit. His master swordsmanship deals high damage. He is the embodiment of martial excellence.
+	FramePassive: Excalibur deals 10% increased damage and attacks 10% faster when wielding swords.
+}

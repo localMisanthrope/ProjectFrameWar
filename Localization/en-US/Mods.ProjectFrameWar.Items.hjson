@@ -1,0 +1,114 @@
+TestBlueprint: {
+	DisplayName: Test Blueprint
+	Tooltip: This is a test Blueprint for Neural Sensors.
+}
+
+ControlModule: {
+	DisplayName: Control Module
+	Tooltip: Autonomy processor for Robotics. A Corpus design.
+}
+
+Morphics: {
+	DisplayName: Morphics
+	Tooltip: An amorphous solid. Possibly Orokin technology.
+}
+
+OrokinCell: {
+	DisplayName: Orokin Cell
+	Tooltip: Ancient energy cell from the Orokin era.
+}
+
+Plastids: {
+	DisplayName: Plastids
+	Tooltip: A disgusting nanite-infested tissue mass.
+}
+
+PolymerBundle: {
+	DisplayName: Polymer Bundle
+	Tooltip: A hard, thermoplastic casing. Manufactured by Corpus.
+}
+
+Salvage: {
+	DisplayName: Salvage
+	Tooltip: High value metals collected from war salvage.
+}
+
+Chassis_Excalibur: {
+	DisplayName: Excalibur Chassis
+	Tooltip: ""
+}
+
+Neuroptics_Excalibur: {
+	DisplayName: Excalibur Neuroptics
+	Tooltip: ""
+}
+
+Systems_Excalibur: {
+	DisplayName: Excalibur Systems
+	Tooltip: ""
+}
+
+Chassis_Mag: {
+	DisplayName: Mag Chassis
+	Tooltip: ""
+}
+
+Neuroptics_Mag: {
+	DisplayName: Mag Neuroptics
+	Tooltip: ""
+}
+
+Systems_Mag: {
+	DisplayName: Mag Systems
+	Tooltip: ""
+}
+
+Chassis_Volt: {
+	DisplayName: Volt Chassis
+	Tooltip: ""
+}
+
+Neuroptics_Volt: {
+	DisplayName: Volt Neuroptics
+	Tooltip: ""
+}
+
+Systems_Volt: {
+	DisplayName: Volt Systems
+	Tooltip: ""
+}
+
+Resource_NeuralSensor: {
+	DisplayName: Neural Sensor
+	Tooltip: Implanted neural-link for controlling augmentations. Grineer design.
+}
+
+Resource_Ferrite: {
+	DisplayName: Ferrite
+	Tooltip: Alloy pellets used in Grineer manufacturing.
+}
+
+Resource_AlloyPlate: {
+	DisplayName: Alloy Plate
+	Tooltip: Carbon steel plates used to reinforce Grineer armor.
+}
+
+Resource_Rubedo: {
+	DisplayName: Rubedo
+	Tooltip: A jagged crystalline ore. Gives off radiant energy.
+}
+
+Resource_VoidTrace: {
+	DisplayName: Void Trace
+	Tooltip: ""
+}
+
+TestLithRelic: {
+	DisplayName: Relic
+	Tooltip: ""
+}
+
+Resource_Circuits: {
+	DisplayName: Circuits
+	Tooltip: Various electronic components.
+}
