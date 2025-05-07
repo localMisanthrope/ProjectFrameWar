@@ -1,1 +1,5 @@
-Modify this file with a description of your mod.
+Developed by local_misanthrope
+
+Delivers the world of Warframe to you.
+
+All assets, names and likenesses belong in full to Digital Extremes. All texture assets created by me.

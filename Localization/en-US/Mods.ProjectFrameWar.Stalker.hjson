@@ -1,0 +1,20 @@
+StalkerTauntPlayer1: I know your every move, {0}
+StalkerTauntPlayer2: |{0}, there is no place to hide.
+StalkerTauntPlayer3: |{0}, you can't run from your past.
+StalkerTauntBoss1: The murder of {0} will not go unpunished.
+StalkerTauntBoss2: There is no salvation for your crime against {0}.
+StalkerTauntBoss3: The blood of {0} is on your hands.
+StalkerTauntBoss3_Alt: Did you really think there would be no repercussions?
+StalkerTauntGeneral1: I am your reckoning!
+StalkerTauntGeneral2: Your sentence is death!
+StalkerTauntGeneral3: You shall not leave this place!
+StalkerTauntAbility: Your TENNO powers are useless!
+StalkerKill1: |{0}, you shall not trouble us again.
+StalkerKill2: Justice is served.
+StalkerKill2_Alt: |{0} has been executed.
+StalkerKill3: It is done. You are no more.
+StalkerKill3_Alt: |{0} is no more.
+StalkerDefeat1: What have you...done?
+StalkerDefeat2: No?! This is not... possible.
+StalkerDefeat3: I have failed. {0} lives.
+StalkerDefeat4: I... have failed... this one will remain... unpunished...

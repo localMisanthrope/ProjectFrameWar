@@ -1,0 +1,18 @@
+VoidFissure: {
+	Activation: |{0} has activated the Orokin Reactor!
+	Join_In: |{0} has inserted a Void Relic! ({1})
+	Fissure_Open: A Void Fissure has opened!
+	Fissure_Unstable: A Void Fissure has destabilized...
+	Fissure_Close: A Void Fissure has been closed!
+	Miniboss_Spawn1: |{0} has arrived to quell the reaction!
+	Miniboss_Spawn2: |{0} halts the reaction!
+
+	Reactor_Status: {
+		Stable: The Reactor is Stable.
+		Unstable: The Reactor is Unstable.
+	}
+
+	Event_End: The reaction ceases...
+	Event_Complete: A Void Relic has been cracked!
+	Event_Failed: A Void Relic has become unstable...
+}

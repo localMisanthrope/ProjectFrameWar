@@ -5,16 +5,13 @@ using Terraria.ModLoader;
 namespace ProjectFrameWar.Content.Items
 {
     [Autoload(false)]
-    internal class Resource(string resourceName, int rarity) : ModItem
+    internal class Resource(string resourceName, ResourceComponent.ResourceRarity rarity) : ModItem
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Texture => $"ProjectFrameWar/res/texture/resources/resource_{resourceName}";
+        public override string Texture => $"{Mod.Name}/res/texture/resources/resource_{resourceName}";
+
         public override string Name => $"Resource_{resourceName}";
-
-        public readonly string resourceName = resourceName;
-
-        public readonly int rarity = rarity;
 
         public override void SetDefaults()
         {
@@ -23,7 +20,7 @@ namespace ProjectFrameWar.Content.Items
 
             Item.material = true;
 
-            Item.TryEnableComponent<ResourceComponent>(x => x.rarity = (ResourceComponent.ResourceRarity)rarity);
+            Item.TryEnableComponent<ResourceComponent>(x => x.rarity = rarity);
 
             base.SetDefaults();
         }

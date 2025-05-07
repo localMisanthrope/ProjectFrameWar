@@ -2,18 +2,16 @@
 using ProjectFrameWar.Core.Items;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items.Parts
+namespace ProjectFrameWar.Content.Items
 {
     [Autoload(false)]
-    internal class Chassis(string frameName) : ModItem
+    internal class FramePart(FramePartComponent.PartType type, string frameName) : ModItem
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Texture => "ProjectFrameWar/res/texture/warframes/part_Chassis";
+        public override string Name => $"{type}_{frameName}";
 
-        private readonly string frameName = frameName;
-
-        public override string Name => $"Chassis_{frameName}";
+        public override string Texture => $"{Mod.Name}/res/texture/warframes/part_{type}" + (frameName.Contains("_Prime") ? "_Prime" : "");
 
         public override void SetDefaults()
         {
@@ -22,7 +20,7 @@ namespace ProjectFrameWar.Content.Items.Parts
 
             Item.TryEnableComponent<FramePartComponent>(x =>
             {
-                x.type = FramePartComponent.PartType.CHASSIS;
+                x.type = type;
                 x.frameName = frameName;
             });
 

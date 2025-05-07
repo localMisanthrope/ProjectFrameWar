@@ -15,9 +15,9 @@ namespace ProjectFrameWar.Core.Items
 
         public enum ResourceRarity
         {
-            COMMON,
-            UNCOMMON,
-            RARE
+            Common,
+            Uncommon,
+            Rare
         }
     }
 }

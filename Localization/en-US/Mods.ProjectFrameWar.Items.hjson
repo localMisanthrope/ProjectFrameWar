@@ -1,31 +1,6 @@
-TestBlueprint: {
-	DisplayName: Test Blueprint
-	Tooltip: This is a test Blueprint for Neural Sensors.
-}
-
-ControlModule: {
-	DisplayName: Control Module
-	Tooltip: Autonomy processor for Robotics. A Corpus design.
-}
-
 Morphics: {
 	DisplayName: Morphics
 	Tooltip: An amorphous solid. Possibly Orokin technology.
-}
-
-OrokinCell: {
-	DisplayName: Orokin Cell
-	Tooltip: Ancient energy cell from the Orokin era.
-}
-
-Plastids: {
-	DisplayName: Plastids
-	Tooltip: A disgusting nanite-infested tissue mass.
-}
-
-PolymerBundle: {
-	DisplayName: Polymer Bundle
-	Tooltip: A hard, thermoplastic casing. Manufactured by Corpus.
 }
 
 Salvage: {
@@ -100,7 +75,7 @@ Resource_Rubedo: {
 
 Resource_VoidTrace: {
 	DisplayName: Void Trace
-	Tooltip: ""
+	Tooltip: A substance used to increase the power within Relics.
 }
 
 TestLithRelic: {
@@ -111,4 +86,44 @@ TestLithRelic: {
 Resource_Circuits: {
 	DisplayName: Circuits
 	Tooltip: Various electronic components.
+}
+
+Resource_NeuralSensor_Blueprint: {
+	Tooltip: ""
+	DisplayName: Neural Sensor Blueprint
+}
+
+Neuroptics_Excalibur_Blueprint: {
+	DisplayName: Excalibur Neuroptics Blueprint
+	Tooltip: ""
+}
+
+Neuroptics_Mag_Blueprint: {
+	DisplayName: Mag Neuroptics Blueprint
+	Tooltip: ""
+}
+
+Neuroptics_Volt_Blueprint: {
+	DisplayName: Volt Neuroptics Blueprint
+	Tooltip: ""
+}
+
+Resource_ControlModule: {
+	DisplayName: Control Module
+	Tooltip: Autonomy processor for Robotics. A Corpus design.
+}
+
+Resource_OrokinCell: {
+	DisplayName: Orokin Cell
+	Tooltip: Ancient energy cell from the Orokin era.
+}
+
+Resource_Plastids: {
+	DisplayName: Plastids
+	Tooltip: A disgusting nanite-infested tissue mass.
+}
+
+Resource_PolymerBundle: {
+	DisplayName: Polymer Bundle
+	Tooltip: A hard, thermoplastic casing. Manufactured by Corpus.
 }

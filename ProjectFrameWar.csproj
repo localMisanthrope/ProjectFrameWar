@@ -10,18 +10,27 @@
 	<ItemGroup>
 	  <None Remove="icon.png" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Blueprints.hjson" />
+	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Events.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Items.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Relics.hjson" />
+	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Stalker.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Tiles.hjson" />
+	  <None Remove="localization\en-us\Mods.ProjectFrameWar.WIndowTitles.hjson" />
 	  <None Remove="res\texture\blueprint_back.png" />
 	  <None Remove="res\texture\placeholder.png" />
-	  <None Remove="res\texture\relic_lith_sheet.png" />
+	  <None Remove="res\texture\resources\excalibur_MapHead.png" />
+	  <None Remove="res\texture\resources\part_BladeComponent_Prime.png" />
 	  <None Remove="res\texture\resources\part_Chassis.png" />
 	  <None Remove="res\texture\resources\part_Systems.png" />
+	  <None Remove="res\texture\resources\relic_lith_sheet.png" />
 	  <None Remove="res\texture\resources\resource_AlloyPlate.png" />
 	  <None Remove="res\texture\resources\resource_Circuits.png" />
+	  <None Remove="res\texture\resources\resource_ControlModule.png" />
 	  <None Remove="res\texture\resources\resource_Ferrite.png" />
 	  <None Remove="res\texture\resources\resource_NeuralSensor.png" />
+	  <None Remove="res\texture\resources\resource_OrokinCell.png" />
+	  <None Remove="res\texture\resources\resource_Plastids.png" />
+	  <None Remove="res\texture\resources\resource_PolymerBundle.png" />
 	  <None Remove="res\texture\resources\resource_Rubedo.png" />
 	  <None Remove="res\texture\warframes\part_Neuroptics.png" />
 	  <None Remove="res\texture\warframes\resource_VoidTrace.png" />
@@ -32,14 +41,12 @@
 	  <Folder Include="Content\Items\Warframes\Excalibur\" />
 	  <Folder Include="Content\Items\Warframes\Excalibur_Prime\" />
 	  <Folder Include="Content\Items\Warframes\Excalibur_Umbra\" />
-	  <Folder Include="Core\Systems\" />
 	  <Folder Include="Core\Tiles\" />
 	  <Folder Include="res\sound\ambient\" />
 	  <Folder Include="res\sound\items\pickups\" />
 	  <Folder Include="res\sound\warframes\excalibur\" />
 	  <Folder Include="res\texture\warframes\excalibur\umbra\" />
 	  <Folder Include="res\texture\warframes\excalibur\prime\" />
-	  <Folder Include="res\texture\warframes\excalibur\normal\" />
 	</ItemGroup>
 
 </Project>

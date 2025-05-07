@@ -46,7 +46,7 @@ namespace ProjectFrameWar.Core.Items
 
         public override bool Component_PreDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            spriteBatch.Draw(blueprintBack.Value, position, frame, drawColor, 0f, origin, scale * 1.25f, SpriteEffects.None, 1);
+            spriteBatch.Draw(blueprintBack.Value, position, frame, drawColor, 0f, origin, 1.25f, SpriteEffects.None, 0f);
 
             return true;
         }

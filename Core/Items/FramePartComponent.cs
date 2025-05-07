@@ -1,5 +1,4 @@
-﻿using Humanizer;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -24,16 +23,16 @@ namespace ProjectFrameWar.Core.Items
             tooltips[0].Text.Insert(0, frameName + " ");
 
             tooltips.Insert(1, new(Mod, "FramePartTooltip",
-                Language.GetText("Mods.ProjectFrameWar.Warframes.Frame_Part_Format").Format(type.ToString().Titleize(), frameName)));
+                Language.GetText("Mods.ProjectFrameWar.Warframes.Frame_Part_Format").Format(type, frameName)));
 
             base.Component_ModifyTooltips(item, tooltips);
         }
 
         public enum PartType
         {
-            CHASSIS,
-            NEUROPTICS,
-            SYSTEMS
+            Chassis,
+            Neuroptics,
+            Systems
         }
     }
 }

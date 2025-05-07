@@ -42,7 +42,7 @@ namespace ProjectFrameWar.Content.Items
             player.setBonus = Language.GetTextValue($"Mods.ProjectFrameWar.Warframes.SetBonus_{frameName}");
 
             player.TryGetComponent(out WarframeComponent frame);
-            frame.currentFrameData = FrameLoader.allFrameData[frameName];
+            frame.currentFrameData = FrameLoader.allFrameData[frameName].data;
 
             base.UpdateArmorSet(player);
         }

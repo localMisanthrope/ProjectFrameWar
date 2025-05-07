@@ -1,5 +1,4 @@
-﻿using ProjectFrameWar.Content.Items.Parts;
-using ProjectFrameWar.Core.Extensions;
+﻿using ProjectFrameWar.Core.Extensions;
 using ProjectFrameWar.Core.Items;
 using Terraria.ModLoader;
 
@@ -12,21 +11,21 @@ namespace ProjectFrameWar.Content.Items.Relics
         public override void SetDefaults()
         {
             Item.height = 20;
-            Item.width = 20;
+            Item.width = 20;    
 
             Item.TryEnableComponent<RelicComponent>(x =>
             {
                 x.relicRewards = new()
                 {
-                    { ItemExtensions.GetItem<Resource>("Resource_Ferrite"), RelicComponent.ItemRarity.COMMON },
-                    { ItemExtensions.GetItem<Resource>("Resource_AlloyPlate"), RelicComponent.ItemRarity.COMMON },
-                    { ItemExtensions.GetItem<Resource>("Resource_Rubedo"), RelicComponent.ItemRarity.COMMON },
-                    { ItemExtensions.GetItem<Resource>("Resource_NeuralSensor"), RelicComponent.ItemRarity.UNCOMMON },
-                    { ItemExtensions.GetItem<Resource>("Resource_VoidTrace"), RelicComponent.ItemRarity.UNCOMMON },
-                    { ItemExtensions.GetItem<Neuroptics>("Neuroptics_Excalibur"), RelicComponent.ItemRarity.RARE }
+                    { ItemExtensions.GetItem<Resource>("Resource_Ferrite"), RelicComponent.ItemRarity.Common },
+                    { ItemExtensions.GetItem<Resource>("Resource_AlloyPlate"), RelicComponent.ItemRarity.Common },
+                    { ItemExtensions.GetItem<Resource>("Resource_Rubedo"), RelicComponent.ItemRarity.Common },
+                    { ItemExtensions.GetItem<Resource>("Resource_NeuralSensor"), RelicComponent.ItemRarity.Uncommon },
+                    { ItemExtensions.GetItem<Resource>("Resource_VoidTrace"), RelicComponent.ItemRarity.Uncommon },
+                    { ItemExtensions.GetItem<FramePart>("Neuroptics_Excalibur"), RelicComponent.ItemRarity.Rare }
                 };
-                x.refinement = RelicComponent.RelicRefinement.INTACT;
-                x.era = RelicComponent.RelicEra.LITH;
+                x.refinement = RelicComponent.RelicRefinement.Intact;
+                x.era = RelicComponent.RelicEra.Lith;
                 x.relicSeries = "E1";
             });
 
