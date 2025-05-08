@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items
+namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
-    internal class Relic(RelicComponent.RelicEra era, string series, Dictionary<Item, RelicComponent.ItemRarity> relicRewards) : ModItem
+    internal class Relic(RelicComponent.RelicEra era, string series, Item[] relicRewards) : ModItem
     {
         protected override bool CloneNewInstances => true;
 

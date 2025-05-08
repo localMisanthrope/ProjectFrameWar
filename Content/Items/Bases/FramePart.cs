@@ -1,8 +1,9 @@
 ﻿using ProjectFrameWar.Core.Extensions;
 using ProjectFrameWar.Core.Items;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items
+namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
     internal class FramePart(FramePartComponent.PartType type, string frameName) : ModItem
@@ -25,6 +26,13 @@ namespace ProjectFrameWar.Content.Items
             });
 
             base.SetDefaults();
+        }
+
+        public override void Load()
+        {
+            Mod.AddContent(new Blueprint(ItemExtensions.GetItem<FramePart>(Name)));
+
+            base.Load();
         }
     }
 }

@@ -27,11 +27,13 @@
 	  <None Remove="res\texture\resources\resource_Circuits.png" />
 	  <None Remove="res\texture\resources\resource_ControlModule.png" />
 	  <None Remove="res\texture\resources\resource_Ferrite.png" />
+	  <None Remove="res\texture\resources\resource_Morphics.png" />
 	  <None Remove="res\texture\resources\resource_NeuralSensor.png" />
 	  <None Remove="res\texture\resources\resource_OrokinCell.png" />
 	  <None Remove="res\texture\resources\resource_Plastids.png" />
 	  <None Remove="res\texture\resources\resource_PolymerBundle.png" />
 	  <None Remove="res\texture\resources\resource_Rubedo.png" />
+	  <None Remove="res\texture\resources\resource_Salvage.png" />
 	  <None Remove="res\texture\warframes\part_Neuroptics.png" />
 	  <None Remove="res\texture\warframes\resource_VoidTrace.png" />
 	</ItemGroup>

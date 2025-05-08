@@ -1,11 +1,12 @@
-﻿using ProjectFrameWar.Core.Extensions;
+﻿using ProjectFrameWar.Content.Items.Loaders;
+using ProjectFrameWar.Core.Extensions;
 using ProjectFrameWar.Core.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items
+namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
     internal class WarframeItem_HeadBase(string frameName) : ModItem
@@ -33,8 +34,8 @@ namespace ProjectFrameWar.Content.Items
             base.SetDefaults();
         }
 
-        public override bool IsArmorSet(Item head, Item body, Item legs) => 
-            body == ItemExtensions.GetItem<WarframeItem_ChestBase>($"Frame_{frameName}_Chest") && 
+        public override bool IsArmorSet(Item head, Item body, Item legs) =>
+            body == ItemExtensions.GetItem<WarframeItem_ChestBase>($"Frame_{frameName}_Chest") &&
             legs == ItemExtensions.GetItem<WarframeItem_LegsBase>($"Frame_{frameName}_Legs");
 
         public override void UpdateArmorSet(Player player)
@@ -42,7 +43,7 @@ namespace ProjectFrameWar.Content.Items
             player.setBonus = Language.GetTextValue($"Mods.ProjectFrameWar.Warframes.SetBonus_{frameName}");
 
             player.TryGetComponent(out WarframeComponent frame);
-            frame.currentFrameData = FrameLoader.allFrameData[frameName].data;
+            frame.currentFrameData = FrameLoader.allFrameData[frameName];
 
             base.UpdateArmorSet(player);
         }

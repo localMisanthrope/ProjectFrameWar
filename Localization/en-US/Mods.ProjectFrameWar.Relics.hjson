@@ -1,5 +1,8 @@
-Relic_Refine_Intact: Intact
-Relic_Refine_Exceptional: Exceptional
-Relic_Refine_Flawless: Flawless
-Relic_Refine_Radiant: Radiant
-Relic_Refinement_Option: Right Click to Refine, {0} to {1}
+Relic_State: {
+	Intact: Intact
+	Exceptional: Exceptional
+	Flawless: Flawless
+	Radiant: Radiant
+}
+
+Relic_Refinable: Right Click to Refine, {0} to {1}

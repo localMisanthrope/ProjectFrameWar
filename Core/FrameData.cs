@@ -1,14 +1,15 @@
 ﻿namespace ProjectFrameWar.Core
 {
-    internal struct FrameData(int healthMax, int shieldMax, int energyMax, float sprintSpeed, bool isPrime = false, bool isUmbra = false)
+    internal struct FrameData(int healthMax, int shieldMax, int energyMax, int armorMax, float sprintSpeed, bool isPrime = false, bool isUmbra = false)
     {
         public bool isPrime = isPrime;
         public bool isUmbra = isUmbra;
 
-        public int healthMax;
-        public int shieldsMax;
-        public int energyMax;
+        public int healthMax = healthMax;
+        public int shieldsMax = shieldMax;
+        public int armorMax = armorMax;
+        public int energyMax = energyMax;
 
-        public float sprintSpeed;
+        public float sprintSpeed = sprintSpeed;
     }
 }

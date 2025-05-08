@@ -2,7 +2,7 @@
 using ProjectFrameWar.Core.Items;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items
+namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
     internal class Resource(string resourceName, ResourceComponent.ResourceRarity rarity) : ModItem

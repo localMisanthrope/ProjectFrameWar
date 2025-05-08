@@ -4,10 +4,10 @@ using ProjectFrameWar.Core.Items;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace ProjectFrameWar.Content.Items
+namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
-    internal class Blueprint(Item result, string key = "") : ModItem
+    internal partial class Blueprint(Item result, string key = "") : ModItem
     {
         protected override bool CloneNewInstances => true;
 
@@ -20,14 +20,10 @@ namespace ProjectFrameWar.Content.Items
             Item.height = 20;
             Item.width = 20;
 
-            var blueprintInfo = BlueprintGuide.blueprintRecipes[key != "" ? key : result.ModItem.Name];
-
             Item.TryEnableComponent<BlueprintComponent>(x =>
             {
-                x.ingredients = blueprintInfo.ingredients;
-                x.requirements = blueprintInfo.requirements;
+                x.blueprint = BlueprintData.blueprintRecipes[key != "" ? key : result.ModItem.Name];
                 x.result = result;
-                x.resultAmount = blueprintInfo.resultAmount;
             });
 
             base.SetDefaults();
