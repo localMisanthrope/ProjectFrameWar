@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using ProjectFrameWar.Core.Players;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 
@@ -45,6 +46,8 @@ namespace ProjectFrameWar.Core.Extensions
                 }
             }
         }
+
+        public static IEnumerable<NPC> SurroundingNPCs(this Player player, float radius) => Main.npc.Where(x => x.active && x.WithinRange(player.position, radius));
 
         public static bool TryEnableComponent<T>(this Player player, Action<T> init = null) where T : PlayerComponent
         {

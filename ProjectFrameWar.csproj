@@ -40,9 +40,9 @@
 
 	<!-- References -->
 	<ItemGroup>
-	  <Folder Include="Content\Items\Warframes\Excalibur\" />
 	  <Folder Include="Content\Items\Warframes\Excalibur_Prime\" />
 	  <Folder Include="Content\Items\Warframes\Excalibur_Umbra\" />
+	  <Folder Include="Content\Items\Warframes\Mag\" />
 	  <Folder Include="Core\Tiles\" />
 	  <Folder Include="res\sound\ambient\" />
 	  <Folder Include="res\sound\items\pickups\" />

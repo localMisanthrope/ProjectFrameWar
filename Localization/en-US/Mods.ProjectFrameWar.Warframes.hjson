@@ -1,5 +1,8 @@
 Frame_Part_Format: The {0} component of the {1} Warframe.
+
 SetBonus_Excalibur: Enabled the Excalibur Warframe.
+SetBonus_Mag: Enabled the Mag Warframe.
+SetBonus_Rhino: Enabled the Rhino Warframe.
 
 Excalibur: {
 	FrameName: Excalibur

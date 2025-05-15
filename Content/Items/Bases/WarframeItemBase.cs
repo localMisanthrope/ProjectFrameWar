@@ -35,15 +35,12 @@ namespace ProjectFrameWar.Content.Items.Bases
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs) =>
-            body == ItemExtensions.GetItem<WarframeItem_ChestBase>($"Frame_{frameName}_Chest") &&
-            legs == ItemExtensions.GetItem<WarframeItem_LegsBase>($"Frame_{frameName}_Legs");
+            body == ItemExtensions.GetItem<WarframeItem_ChestBase>($"{frameName}Chest") &&
+            legs == ItemExtensions.GetItem<WarframeItem_LegsBase>($"{frameName}Legs");
 
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = Language.GetTextValue($"Mods.ProjectFrameWar.Warframes.SetBonus_{frameName}");
-
-            player.TryGetComponent(out WarframeComponent frame);
-            frame.currentFrameData = FrameLoader.allFrameData[frameName];
 
             base.UpdateArmorSet(player);
         }

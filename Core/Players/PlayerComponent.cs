@@ -3,6 +3,7 @@ using Terraria.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using Terraria.GameInput;
 
 namespace ProjectFrameWar.Core.Players
 {
@@ -33,6 +34,8 @@ namespace ProjectFrameWar.Core.Players
         public virtual void Component_PreUpdate() { }
 
         public virtual void Component_PreUpdateMovement() { }
+
+        public virtual void Component_ProcessInput(TriggersSet triggersSet) { }
 
         public sealed override void AnglerQuestReward(float rareMultiplier, List<Item> rewardItems) { return; }
 
@@ -68,5 +71,8 @@ namespace ProjectFrameWar.Core.Players
 
         public sealed override void PreUpdateMovement()
         { if (Enabled) Component_PreUpdateMovement(); }
+
+        public sealed override void ProcessTriggers(TriggersSet triggersSet)
+        { if (Enabled) Component_ProcessInput(triggersSet); }
     }
 }

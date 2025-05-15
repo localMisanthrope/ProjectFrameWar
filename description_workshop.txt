@@ -1,7 +1,37 @@
 [h1]WARFRAME, The Mod[/h1]
 
-Developed by local_misanthrope
+Developed by local_misanthrope.
 
 Delivers the world of Warframe to you.
+
+[h2]FRAME CONSTRUCTION[/h2]
+Find the blueprints for each Warframe component and construct them in a special Defense event!
+Available Warframes;
+- Excalibur
+- Mag
+- Volt
+
+[h2]RELICS[/h2]
+Locate Void Relics and construct an Orokin Reactor.
+Relics can be cracked with the Orokin Reactor. Be wary, Void Fissures will ravage your world!
+Your reward is a piece of Prime gear from a set pool!
+
+[h2]DISCLAIMER[/h2]
+This mod deviates heavily from the systems Warframe has imposed. 
+This was done to make systems more simplistic and better refined for a Terraria context.
+If things look different, they probably are!
+
+Translation Help:
+If you'd like to contribute translations for the content in this mod, please visit my Discord server. (Link pending)
+
+Current languages needed:
+- de-DE / Deutsch
+- es-ES / Espanol
+- fr-FR / Francois
+- it-IT / Italiano
+- pt-BR / Brazilian Portuguese
+- pl-PR / Polish
+- ru-RU / Russian
+- zH-Hans / Chinese (Simplified)
 
 All assets, names and likenesses belong in full to Digital Extremes. All texture assets created by me.
