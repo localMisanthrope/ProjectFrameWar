@@ -7,19 +7,19 @@ using Terraria.ModLoader.IO;
 
 namespace ProjectFrameWar.Core.Items
 {
-    internal class ItemComponent : GlobalItem
+    internal abstract class ItemComponent : GlobalItem
     {
         public bool Enabled { get; set; }
 
-        public override bool InstancePerEntity { get; } = true;
+        public sealed override bool InstancePerEntity { get; } = true;
 
-        public const string LocalKey = "Mods.ProjectFrameWar.ItemComponents";
+        public const string LOCAL_KEY = "Mods.ProjectFrameWar.ItemComponents";
 
-        public virtual void OnEnabled() { }
+        public virtual void OnEnabled(Item item) { }
 
-        public virtual void OnDisabled() { }
+        public virtual void OnDisabled(Item item) { }
 
-        public virtual bool Component_CanPickup(Item item, Player player) { return true; }
+        public virtual bool Component_CanPickup(Item item, Player player) => true;
 
         public virtual bool Component_PreDrawWorld(Item item, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI) => true;
 
@@ -48,31 +48,13 @@ namespace ProjectFrameWar.Core.Items
         public virtual void Component_UpdateInventory(Item item, Player player) { }
 
         public sealed override bool CanPickup(Item item, Player player)
-        {
-            if (Enabled)
-                return Component_CanPickup(item, player);
-
-            else
-                return base.CanPickup(item, player);
-        }
+            => Enabled ? Component_CanPickup(item, player) : base.CanPickup(item, player);
 
         public sealed override bool CanRightClick(Item item)
-        {
-            if (Enabled)
-                return Component_CanRCLK(item);
-
-            else
-                return base.CanRightClick(item);
-        }
+            => Enabled ? Component_CanRCLK(item) : base.CanRightClick(item);
 
         public sealed override bool OnPickup(Item item, Player player)
-        {
-            if (Enabled)
-                return Component_OnPickup(player, item);
-
-            else
-                return base.OnPickup(item, player);
-        }
+            => Enabled ? Component_OnPickup(player, item) : base.OnPickup(item, player);
 
         public sealed override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {

@@ -1,3 +1,4 @@
 displayName = WARFRAME, The Mod
 author = local_misanthrope
 version = 0.1
+buildIgnore = Old/*

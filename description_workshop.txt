@@ -5,21 +5,20 @@ Developed by local_misanthrope.
 Delivers the world of Warframe to you.
 
 [h2]FRAME CONSTRUCTION[/h2]
-Find the blueprints for each Warframe component and construct them in a special Defense event!
-Available Warframes;
-- Excalibur
-- Mag
-- Volt
+Each frame is crafted with three parts, the Chassis, Neuroptics and Systems.
+Equipping a frame enables you to modify it with special Frame Modules.
 
-[h2]RELICS[/h2]
-Locate Void Relics and construct an Orokin Reactor.
-Relics can be cracked with the Orokin Reactor. Be wary, Void Fissures will ravage your world!
-Your reward is a piece of Prime gear from a set pool!
+[h2]MODS[/h2]
+Modding has been simplified to a few items which function similarly like accessories. Collect them all!
 
-[h2]DISCLAIMER[/h2]
-This mod deviates heavily from the systems Warframe has imposed. 
-This was done to make systems more simplistic and better refined for a Terraria context.
-If things look different, they probably are!
+[h2]CONTENT DEVIATION DISCLAIMER[/h2]
+This mod deviates heavily from the systems Warframe has imposed. This was done to make systems more simplistic and better refined for a Terraria context.
+This mod also alters the base game to enable it to function properly in the world.
+If things look and feel different, [b]they probably are[/b]!
+
+[h2]COMPATIBILITY DISCLAIMER[/h2]
+At this time, I will not be considering compatibility with any mods. If you would like to enable this, consider supporting it yourself through modpacks.
+As for companion and addon mods, I am working on facilitating cross-mod capabilities. Stay tuned!
 
 Translation Help:
 If you'd like to contribute translations for the content in this mod, please visit my Discord server. (Link pending)
@@ -34,4 +33,5 @@ Current languages needed:
 - ru-RU / Russian
 - zH-Hans / Chinese (Simplified)
 
-All assets, names and likenesses belong in full to Digital Extremes. All texture assets created by me.
+All assets, names and likenesses belong in full to Digital Extremes. 
+All texture assets created by me, and all code written by me.

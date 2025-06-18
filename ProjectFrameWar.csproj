@@ -9,10 +9,9 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="icon.png" />
-	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Blueprints.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Events.hjson" />
+	  <None Remove="localization\en-us\Mods.ProjectFrameWar.ItemComponents.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Items.hjson" />
-	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Relics.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Stalker.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Tiles.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.WIndowTitles.hjson" />
@@ -40,10 +39,6 @@
 
 	<!-- References -->
 	<ItemGroup>
-	  <Folder Include="Content\Items\Warframes\Excalibur_Prime\" />
-	  <Folder Include="Content\Items\Warframes\Excalibur_Umbra\" />
-	  <Folder Include="Content\Items\Warframes\Mag\" />
-	  <Folder Include="Core\Tiles\" />
 	  <Folder Include="res\sound\ambient\" />
 	  <Folder Include="res\sound\items\pickups\" />
 	  <Folder Include="res\sound\warframes\excalibur\" />

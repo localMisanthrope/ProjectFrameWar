@@ -1,0 +1,7 @@
+[
+  {
+    "name": "EX1",
+    "era": 0,
+    "rewards": [ "resource_AlloyPlate", "resource_Rubedo", "resource_Plastids", "resource_PolymerBundle", "resource_ControlModule", "part_Neuroptics_Excalibur" ]
+  }
+]

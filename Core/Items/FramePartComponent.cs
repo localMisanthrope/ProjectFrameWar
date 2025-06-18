@@ -5,27 +5,22 @@ using Terraria.ModLoader;
 
 namespace ProjectFrameWar.Core.Items
 {
+    internal enum PartType
+    {
+        Chassis,
+        Neuroptics,
+        Systems
+    }
+
     internal class FramePartComponent : ItemComponent
     {
-        public PartType type;
+        internal FrameData data;
 
-        public string frameName;
+        internal PartType type;
 
         public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            tooltips[0].Text.Insert(0, frameName + " ");
-
-            tooltips.Insert(1, new(Mod, "FramePartTooltip",
-                Language.GetText("Mods.ProjectFrameWar.Warframes.Frame_Part_Format").Format(type, frameName)));
-
-            base.Component_ModifyTooltips(item, tooltips);
-        }
-
-        public enum PartType
-        {
-            Chassis,
-            Neuroptics,
-            Systems
+            tooltips.Insert(1, new(Mod, "FramePartTooltip", Language.GetText($"{LOCAL_KEY}.FramePartDescription").Format(type, data.name)));
         }
     }
 }

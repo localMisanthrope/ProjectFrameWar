@@ -1,38 +1,28 @@
-﻿using ProjectFrameWar.Core.Extensions;
+﻿using ProjectFrameWar.Core;
+using ProjectFrameWar.Core.Extensions;
 using ProjectFrameWar.Core.Items;
-using Terraria;
 using Terraria.ModLoader;
 
 namespace ProjectFrameWar.Content.Items.Bases
 {
     [Autoload(false)]
-    internal class FramePart(FramePartComponent.PartType type, string frameName) : ModItem
+    internal class FramePart(FrameData data, PartType type) : ModItem
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Name => $"{type}_{frameName}";
+        public override string Name => $"part_{type}_{data.name}";
 
-        public override string Texture => $"{Mod.Name}/res/texture/warframes/part_{type}" + (frameName.Contains("_Prime") ? "_Prime" : "");
+        public override string Texture => $"{ProjectFrameWar.texPath}/warframes/part_{type}";
 
         public override void SetDefaults()
         {
-            Item.height = 20;
-            Item.width = 20;
-
             Item.TryEnableComponent<FramePartComponent>(x =>
             {
+                x.data = data;
                 x.type = type;
-                x.frameName = frameName;
             });
 
             base.SetDefaults();
-        }
-
-        public override void Load()
-        {
-            Mod.AddContent(new Blueprint(ItemExtensions.GetItem<FramePart>(Name)));
-
-            base.Load();
         }
     }
 }

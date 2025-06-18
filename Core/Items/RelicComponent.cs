@@ -16,162 +16,131 @@ using Terraria.ModLoader.IO;
 
 namespace ProjectFrameWar.Core.Items
 {
+    internal enum RelicEra { Lith, Meso, Neo, Axi }
+
+    internal enum RelicRewardRarity { Common, Uncommon, Rare }
+
+    internal enum RelicState { Intact, Exceptional, Flawless, Radiant }
+
     internal class RelicComponent : ItemComponent
     {
-        public Item[] relicRewards;
+        public RelicData data;
 
-        internal float[] rarityPercentages;
+        public RelicState refinement;
 
-        public Item vtRef = ItemExtensions.GetItem<Resource>("Resource_VoidTrace");
+        internal float[] rewardPercentages;
 
-        public RelicEra era;
+        public int RefineCost => 25 * (int)Math.Pow(2, (int)refinement);
 
-        public RelicRefinement refinement;
-
-        public string relicSeries;
-
-        private const string LOCAL_KEY = "Mods.ProjectFrameWar.Relics";
-
-        private static ItemRarity GetItemRarity(int index) => index switch
+        private static RelicRewardRarity GetItemRarity(int index) => index switch
         {
-            3 => ItemRarity.Uncommon,
-            4 => ItemRarity.Uncommon,
-            5 => ItemRarity.Rare,
-            _ => ItemRarity.Common
+            3 => RelicRewardRarity.Uncommon,
+            4 => RelicRewardRarity.Uncommon,
+            5 => RelicRewardRarity.Rare,
+            _ => RelicRewardRarity.Common
         };
 
-        public override void Component_UpdateInventory(Item item, Player player) 
+        public override bool Component_CanRCLK(Item item) => true;
+
+        public override void Component_OnRCLK(Item item, Player player)
         {
-            rarityPercentages = refinement switch {
-                RelicRefinement.Intact => [0.2533f, 0.11f, 0.02f],
-                RelicRefinement.Exceptional => [0.2333f, 0.13f, 0.04f],
-                RelicRefinement.Flawless => [0.2f, 0.17f, 0.06f],
-                RelicRefinement.Radiant => [0.1667f, 0.2f, 0.1f],
-                _ => [0.2533f, 0.11f, 0.02f]
-            };
-        }
+            if (Main.keyState.IsKeyDown(Keys.LeftShift))
+                DispenseRelicReward(player);
 
-        public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips) 
-        {
-            string refineState = Language.GetText($"{LOCAL_KEY}.Relic_State.{refinement}").Value;
-
-            string nextRefine = Language.GetText($"{LOCAL_KEY}.Relic_State.{refinement.NextEnum()}").Value;
-
-            tooltips[0].Text = $"{era} {relicSeries} {item.Name} ({refineState})";
-
-            for (int i = 0; i < relicRewards.Length; i++) 
+            else
             {
-                ItemRarity rarity = GetItemRarity(i);
+                int count = player.CountFromInventory(ItemExtensions.GetItem("resource_VoidTraces").type);
+                if (count >= RefineCost && refinement < RelicState.Radiant)
+                {
+                    player.ConsumeFromInventory(ItemExtensions.GetItem("resource_VoidTraces").type, RefineCost);
+                    refinement += 1;
+                }
+                else
+                {
 
-                float getPercentage = rarityPercentages[(int)rarity] * 100;
+                }
 
-                tooltips.Add(new(Mod, "RelicReward", $"{relicRewards[i].TextIcon(Mod)} {relicRewards[i].Name} " +
-                    $"({getPercentage.ToString("N", new NumberFormatInfo() { NumberDecimalDigits = 2 })}%)") {
-                    OverrideColor = rarity switch {
-                        ItemRarity.Common => Color.SandyBrown,
-                        ItemRarity.Uncommon => Color.Silver,
-                        ItemRarity.Rare => Color.Goldenrod,
-                        _ => Color.Brown
-                    }});
+                item.stack++;
             }
-            if (refinement is not RelicRefinement.Radiant)
-                tooltips.Add(new(Mod, "UpgradeLine", 
-                    $"{Language.GetText($"{LOCAL_KEY}.Relic_Refinable").Format(refineState, nextRefine)}" +
-                    $"{vtRef.TextIcon(Mod)} ({25 * (int)Math.Pow(2, (int)refinement)})"));
 
-            base.Component_ModifyTooltips(item, tooltips);
+            base.Component_OnRCLK(item, player);
         }
 
-        public void DispenseReward(Player player) //To-do: Optimize this function.
-        { 
-            int[] percentageArr = new int[relicRewards.Length];
-
-            for (int i = 0; i < relicRewards.Length; i++)
-                percentageArr[i] = (int)(rarityPercentages[(int)GetItemRarity(i)] * 100);
+        public void DispenseRelicReward(Player player)
+        {
+            int[] percentageArr = new int[data.rewards.Length];
+            for (int i = 0; i < percentageArr.Length; i++)
+                percentageArr[i] = (int)(rewardPercentages[(int)GetItemRarity(i)] * 100);
 
             int result = Main.rand.Next(0, percentageArr.Sum());
-
             int weightCheck = 0;
 
-            for (int i = 0; i < relicRewards.Length; i++) 
+            for (int i = 0; i < percentageArr.Length; i++)
             {
                 weightCheck += percentageArr[i];
-
                 if (result > weightCheck)
                     continue;
 
-                else 
+                else
                 {
-                    Item.NewItem(new EntitySource_Gift(player), player.position, relicRewards[i]);
-                    Item.NewItem(new EntitySource_Gift(player), player.Center, player.Size, vtRef.type, Main.rand.Next(5, 26));
+                    player.QuickSpawnItem(new EntitySource_Gift(player), ItemExtensions.GetItem(data.rewards[i]));
+                    player.QuickSpawnItem(new EntitySource_Gift(player), ItemExtensions.GetItem("resource_VoidTraces"), Main.rand.Next(6, 26));
                     break;
                 }
             }
         }
 
-        public override bool Component_CanRCLK(Item item) => true;
-
-        public override void Component_OnRCLK(Item item, Player player) 
+        public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (Main.keyState.IsKeyDown(Keys.LeftShift)) //Test function for now. Will implement mission rewards much, much later.
-                DispenseReward(player);
+            string state = Language.GetText($"{LOCAL_KEY}.RelicState.{refinement}").Value;
+            string nextState = Language.GetText($"{LOCAL_KEY}.RelicState.{refinement.NextEnum()}").Value;
 
-            else {
-                int count = player.CountFromInventory(vtRef.type);
-                int traceReq = 25 * (int)Math.Pow(2, (int)refinement);
+            item.SetNameOverride($"{data.era} {data.name} Relic ({state})");
 
-                if (count >= traceReq) 
+            for (int i = 0; i < data.rewards.Length; i++)
+            {
+                float percentage = rewardPercentages[(int)GetItemRarity(i)];
+
+                Item reward = ItemExtensions.GetItem(data.rewards[i]);
+
+                tooltips.Add(new(Mod, $"RewardLine_{i}", $"{reward.TextIcon()} {reward.Name} ({percentage.ToString("N", new NumberFormatInfo() { NumberDecimalDigits = 2 })}%)")
                 {
-                    player.ConsumeFromInventory(vtRef.type, traceReq);
-                    refinement += 1;
-                    //To-do: Play custom sound that changes with refinement level (for local player only).
-                }
-
-                else 
-                {
-                    //To-do: Play custom sound for when the item fails to be refined.
-                }
-
-                item.stack++;
+                    OverrideColor = GetItemRarity(i) switch 
+                    { 
+                        RelicRewardRarity.Common => Color.SandyBrown,
+                        RelicRewardRarity.Uncommon => Color.Silver,
+                        RelicRewardRarity.Rare => Color.Goldenrod
+                    }
+                });
             }
+
+            if (refinement is not RelicState.Radiant)
+                tooltips.Add(new(Mod, "RefineStatusLine", "\n" + Language.GetText($"{LOCAL_KEY}.RelicRefinable").Format(state, nextState)
+                    + $" {ItemExtensions.GetItem("resource_VoidTraces").TextIcon()} ({RefineCost})"));
         }
+
+        public override void Component_UpdateInventory(Item item, Player player) => rewardPercentages = refinement switch
+        {
+            RelicState.Intact => [0.2533f, 0.11f, 0.02f],
+            RelicState.Exceptional => [0.2333f, 0.13f, 0.04f],
+            RelicState.Flawless => [0.2f, 0.17f, 0.06f],
+            RelicState.Radiant => [0.1667f, 0.2f, 0.1f],
+            _ => [0.2533f, 0.11f, 0.02f]
+        };
 
         public override bool Component_PreDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) => false;
         public override bool Component_PreDrawWorld(Item item, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI) => false;
 
-        public override void Component_PostDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) {
-            Asset<Texture2D> sheet = ModContent.Request<Texture2D>($"ProjectFrameWar/res/texture/relic_{era.ToString().ToLower()}_sheet");
-            var relicFrame = sheet.Frame(horizontalFrames: 4, frameX: (int)refinement);
-            var relicOrig = relicFrame.Size() / 2;
+        public override void Component_PostDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
+        {
+            Asset<Texture2D> sheet = ModContent.Request<Texture2D>($"ProjectFrameWar/res/texture/relic_{data.era}_Sheet");
+            var sheetFrame = sheet.Frame(horizontalFrames: 4, frameX: (int)refinement);
+            var sheetOrig = sheetFrame.Size() / 2;
 
-            spriteBatch.Draw(sheet.Value, position, relicFrame, drawColor, 0, relicOrig, scale, SpriteEffects.None, 0);
+            spriteBatch.Draw(sheet.Value, position, sheetFrame, drawColor, 0, sheetOrig, scale, SpriteEffects.None, 0);
         }
 
         public override void Component_SaveData(Item item, TagCompound tag) => tag[nameof(refinement)] = (int)refinement;
-
-        public override void Component_LoadData(Item item, TagCompound tag) => refinement = (RelicRefinement)tag.GetInt(nameof(refinement));
-
-        public enum RelicRefinement 
-        {
-            Intact,
-            Exceptional,
-            Flawless,
-            Radiant
-        }
-
-        public enum ItemRarity 
-        {
-            Common,
-            Uncommon,
-            Rare
-        }
-
-        public enum RelicEra 
-        {
-            Lith,
-            Meso,
-            Neo,
-            Axi
-        }
+        public override void Component_LoadData(Item item, TagCompound tag) => refinement = (RelicState)tag.GetInt(nameof(refinement));
     }
 }

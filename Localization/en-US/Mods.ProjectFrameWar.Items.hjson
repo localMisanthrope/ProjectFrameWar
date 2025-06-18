@@ -1,129 +1,119 @@
-Morphics: {
+relic_Lith_EX1: {
+	DisplayName: Lith EX1 Relic
+	Tooltip: ""
+}
+
+resource_AlloyPlate: {
+	DisplayName: Alloy Plate
+	Tooltip: ""
+}
+
+resource_ArgonCrystal: {
+	DisplayName: Argon Crystal
+	Tooltip: ""
+}
+
+resource_Circuits: {
+	DisplayName: Circuits
+	Tooltip: ""
+}
+
+resource_ControlModule: {
+	DisplayName: Control Module
+	Tooltip: ""
+}
+
+resource_Ferrite: {
+	DisplayName: Ferrite
+	Tooltip: ""
+}
+
+resource_Morphics: {
 	DisplayName: Morphics
-	Tooltip: An amorphous solid. Possibly Orokin technology.
+	Tooltip: ""
 }
 
-Salvage: {
+resource_NanoSpores: {
+	DisplayName: Nano Spores
+	Tooltip: ""
+}
+
+resource_NeuralSensor: {
+	DisplayName: Neural Sensor
+	Tooltip: ""
+}
+
+resource_OrokinCell: {
+	DisplayName: Orokin Cell
+	Tooltip: ""
+}
+
+resource_Plastids: {
+	DisplayName: Plastids
+	Tooltip: ""
+}
+
+resource_PolymerBundle: {
+	DisplayName: Polymer Bundle
+	Tooltip: ""
+}
+
+resource_Rubedo: {
+	DisplayName: Rubedo
+	Tooltip: ""
+}
+
+resource_Salvage: {
 	DisplayName: Salvage
-	Tooltip: High value metals collected from war salvage.
+	Tooltip: ""
 }
 
-Chassis_Excalibur: {
+resource_VoidTraces: {
+	DisplayName: Void Traces
+	Tooltip: ""
+}
+
+part_Chassis_Excalibur: {
 	DisplayName: Excalibur Chassis
 	Tooltip: ""
 }
 
-Neuroptics_Excalibur: {
+part_Neuroptics_Excalibur: {
 	DisplayName: Excalibur Neuroptics
 	Tooltip: ""
 }
 
-Systems_Excalibur: {
+part_Systems_Excalibur: {
 	DisplayName: Excalibur Systems
 	Tooltip: ""
 }
 
-Chassis_Mag: {
-	DisplayName: Mag Chassis
+part_Chassis_Rhino: {
+	DisplayName: Rhino Chassis
 	Tooltip: ""
 }
 
-Neuroptics_Mag: {
-	DisplayName: Mag Neuroptics
+part_Neuroptics_Rhino: {
+	DisplayName: Rhino Neuroptics
 	Tooltip: ""
 }
 
-Systems_Mag: {
-	DisplayName: Mag Systems
+part_Systems_Rhino: {
+	DisplayName: Rhino Systems
 	Tooltip: ""
 }
 
-Chassis_Volt: {
-	DisplayName: Volt Chassis
+blueprint_part_Chassis_Excalibur: {
+	DisplayName: Excalibur Chassis Blueprint
 	Tooltip: ""
 }
 
-Neuroptics_Volt: {
-	DisplayName: Volt Neuroptics
-	Tooltip: ""
-}
-
-Systems_Volt: {
-	DisplayName: Volt Systems
-	Tooltip: ""
-}
-
-Resource_NeuralSensor: {
-	DisplayName: Neural Sensor
-	Tooltip: Implanted neural-link for controlling augmentations. Grineer design.
-}
-
-Resource_Ferrite: {
-	DisplayName: Ferrite
-	Tooltip: Alloy pellets used in Grineer manufacturing.
-}
-
-Resource_AlloyPlate: {
-	DisplayName: Alloy Plate
-	Tooltip: Carbon steel plates used to reinforce Grineer armor.
-}
-
-Resource_Rubedo: {
-	DisplayName: Rubedo
-	Tooltip: A jagged crystalline ore. Gives off radiant energy.
-}
-
-Resource_VoidTrace: {
-	DisplayName: Void Trace
-	Tooltip: A substance used to increase the power within Relics.
-}
-
-TestLithRelic: {
-	DisplayName: Relic
-	Tooltip: ""
-}
-
-Resource_Circuits: {
-	DisplayName: Circuits
-	Tooltip: Various electronic components.
-}
-
-Resource_NeuralSensor_Blueprint: {
-	Tooltip: ""
-	DisplayName: Neural Sensor Blueprint
-}
-
-Neuroptics_Excalibur_Blueprint: {
+blueprint_part_Neuroptics_Excalibur: {
 	DisplayName: Excalibur Neuroptics Blueprint
 	Tooltip: ""
 }
 
-Neuroptics_Mag_Blueprint: {
-	DisplayName: Mag Neuroptics Blueprint
+blueprint_part_Systems_Excalibur: {
+	DisplayName: Excalibur Systems Blueprint
 	Tooltip: ""
-}
-
-Neuroptics_Volt_Blueprint: {
-	DisplayName: Volt Neuroptics Blueprint
-	Tooltip: ""
-}
-
-Resource_ControlModule: {
-	DisplayName: Control Module
-	Tooltip: Autonomy processor for Robotics. A Corpus design.
-}
-
-Resource_OrokinCell: {
-	DisplayName: Orokin Cell
-	Tooltip: Ancient energy cell from the Orokin era.
-}
-
-Resource_Plastids: {
-	DisplayName: Plastids
-	Tooltip: A disgusting nanite-infested tissue mass.
-}
-
-Resource_PolymerBundle: {
-	DisplayName: Polymer Bundle
-	Tooltip: A hard, thermoplastic casing. Manufactured by Corpus.
 }

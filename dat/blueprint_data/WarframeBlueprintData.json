@@ -1,0 +1,20 @@
+[
+  {
+    "result": "part_Chassis_Excalibur",
+    "ingredients": [ "resource_Morphics", "resource_Ferrite", "resource_Rubedo" ],
+    "requirements": [ 1, 1000, 300, 0 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "part_Neuroptics_Excalibur",
+    "ingredients": [ "resource_AlloyPlate", "resource_NeuralSensor", "resource_PolymerBundle", "resource_Rubedo" ],
+    "requirements": [ 150, 1, 150, 500 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "part_Systems_Excalibur",
+    "ingredients": [ "resource_ControlModule", "resource_Morphics", "resource_Salvage", "resource_Plastids" ],
+    "requirements": [ 1, 1, 500, 220 ],
+    "resultAmount": 1
+  }
+]

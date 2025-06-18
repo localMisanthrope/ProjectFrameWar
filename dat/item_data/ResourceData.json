@@ -1,0 +1,58 @@
+[
+  {
+    "name": "AlloyPlate",
+    "rarity": 0
+  },
+  {
+    "name": "ArgonCrystal",
+    "rarity": 2
+  },
+  {
+    "name": "Circuits",
+    "rarity": 1
+  },
+  {
+    "name": "ControlModule",
+    "rarity": 2
+  },
+  {
+    "name": "Ferrite",
+    "rarity": 0
+  },
+  {
+    "name": "Morphics",
+    "rarity": 2
+  },
+  {
+    "name": "NanoSpores",
+    "rarity": 0
+  },
+  {
+    "name": "NeuralSensor",
+    "rarity": 2
+  },
+  {
+    "name": "OrokinCell",
+    "rarity": 2
+  },
+  {
+    "name": "Plastids",
+    "rarity": 1
+  },
+  {
+    "name": "PolymerBundle",
+    "rarity": 1
+  },
+  {
+    "name": "Rubedo",
+    "rarity": 1
+  },
+  {
+    "name": "Salvage",
+    "rarity": 0
+  },
+  {
+    "name": "VoidTraces",
+    "rarity": 1
+  }
+]

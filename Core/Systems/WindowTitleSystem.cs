@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -8,39 +7,23 @@ namespace ProjectFrameWar.Core.Systems
 {
     internal class WindowTitleSystem : ModSystem
     {
-        public List<LocalizedText> titles;
+        public bool doTitleChange;
 
-        public int titlesCount;
+        private int _windowTimer;
 
-        internal int timer;
+        const int WINDOW_TIMER_MAX = 18000;
 
-        public const string LOCAL_KEY = "Mods.ProjectFrameWar.WindowTitles";
-
-        public void GenRandWindowTitle() => Main.instance.Window.Title = $"[WARFRAME]: {titles[Main.rand.Next(0, titlesCount)].Value}";
+        private const string LOCAL_KEY = "Mods.ProjectFrameWar.WindowTitles";
 
         public override void UpdateUI(GameTime gameTime)
         {
-            timer--;
-
-            if (timer <= 0)
-                GenRandWindowTitle();
+            if (doTitleChange && --_windowTimer <= 0)
+            {
+                Main.instance.Window.Title = "[FRAMEWAR]: " + Language.GetText($"{LOCAL_KEY}.WindowTitle{Main.rand.Next(11)}").Value;
+                _windowTimer = WINDOW_TIMER_MAX;
+            }
 
             base.UpdateUI(gameTime);
-        }
-
-        public override void Load()
-        {
-            titles = [];
-            titlesCount = 11;
-
-            for (int i = 1; i == titlesCount; i++)
-                titles.Add(Language.GetText($"{LOCAL_KEY}.WindowTitle{i}"));
-
-            GenRandWindowTitle();
-
-            timer = 18000;
-
-            base.Load();
         }
     }
 }

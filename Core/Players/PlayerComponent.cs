@@ -7,11 +7,11 @@ using Terraria.GameInput;
 
 namespace ProjectFrameWar.Core.Players
 {
-    internal class PlayerComponent : ModPlayer
+    internal abstract class PlayerComponent : ModPlayer
     {
         public bool Enabled { get; set; }
 
-        public const string LocalKey = "Mods.ProjectFrameWar.PlayerComponents";
+        public const string LOCAL_KEY = "Mods.ProjectFrameWar.PlayerComponents";
 
         public virtual void OnEnabled() { }
 
