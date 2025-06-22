@@ -1,6 +1,8 @@
 ﻿using ProjectFrameWar.Core.Items;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -14,15 +16,48 @@ namespace ProjectFrameWar.Core.Extensions
         public static string TextIcon(this Item item, int stack = 0)
             => $"[i" + ((stack == 0) ? ":" : $"/{stack}:") + ((item.ModItem is not null) ? $"{item.ModItem.Mod.Name}/{item.ModItem.Name}" : $"{item.type}") + "]";
 
+        public static bool TryEnableComponent(this Item item, string name)
+        {
+            var result = item.GetAllComponents().First(x => x.Name == $"{name}Component");
+            if (result is null)
+                return false;
+
+            result.Enabled = true;
+            result.OnEnabled(item);
+            return true;
+        }
+
+        public static bool TryDisableComponent(this Item item, string name)
+        {
+            var result = item.GetAllComponents().First(x => x.Name == $"{name}Component");
+            if (result is null)
+                return false;
+
+            result.OnDisabled(item);
+            result.Enabled = false;
+            return true;
+        }
+
         public static bool TryEnableComponent<T>(this Item item, Action<T> init = null) where T : ItemComponent
         {
             if (!item.TryGetGlobalItem(out T result))
                 return false;
 
             result.Enabled = true;
-            init.Invoke(result);
+            init?.Invoke(result);
             result.OnEnabled(item);
             return true;
+        }
+
+        public static List<ItemComponent> GetAllComponents(this Item item)
+        {
+            var list = new List<ItemComponent>();
+
+            foreach (var global in item.Globals)
+                if (global is ItemComponent component)
+                    list.Add(component);
+
+            return list;
         }
 
         public static bool TryGetComponent<T>(this Item item, out T result) where T : ItemComponent

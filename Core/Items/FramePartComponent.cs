@@ -20,7 +20,7 @@ namespace ProjectFrameWar.Core.Items
 
         public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            tooltips.Insert(1, new(Mod, "FramePartTooltip", Language.GetText($"{LOCAL_KEY}.FramePartDescription").Format(type, data.name)));
+            tooltips.Insert(1, new(Mod, "FramePartTooltip", Language.GetText($"{LOCAL_KEY}.FramePartDescription").Format(type, data.Name)));
         }
     }
 }

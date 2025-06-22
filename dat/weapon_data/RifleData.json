@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Boltor",
+    "damage": 20,
+    "criticalChance": 0.22,
+    "criticalDamage": 2.8,
+    "statusChance": 0.0933
+  },
+  {
+    "name": "Soma",
+    "damage": 20,
+    "criticalChance": 0.3,
+    "criticalDamage": 3.0,
+    "statusChance": 0.07
+  }
+]

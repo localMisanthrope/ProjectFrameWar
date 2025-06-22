@@ -23,6 +23,8 @@ namespace ProjectFrameWar.Core.Items
 
         internal int[] counts;
 
+        internal BlueprintCategory category;
+
         public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             for (int i = 0; i < data.ingredients.Length; i++)

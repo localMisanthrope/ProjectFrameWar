@@ -5,72 +5,72 @@ relic_Lith_EX1: {
 
 resource_AlloyPlate: {
 	DisplayName: Alloy Plate
-	Tooltip: ""
+	Tooltip: Carbon steel plates used to reinforce Grineer armor.
 }
 
 resource_ArgonCrystal: {
 	DisplayName: Argon Crystal
-	Tooltip: ""
+	Tooltip: Void based radioactive resource that decays every day it is out of the Void.
 }
 
 resource_Circuits: {
 	DisplayName: Circuits
-	Tooltip: ""
+	Tooltip: Various electronic components.
 }
 
 resource_ControlModule: {
 	DisplayName: Control Module
-	Tooltip: ""
+	Tooltip: Autonomy processor for Robotics. A Corpus design.
 }
 
 resource_Ferrite: {
 	DisplayName: Ferrite
-	Tooltip: ""
+	Tooltip: Alloy pellets used in Grineer manufacturing.
 }
 
 resource_Morphics: {
 	DisplayName: Morphics
-	Tooltip: ""
+	Tooltip: An amorphous solid. Possibly Orokin technology.
 }
 
 resource_NanoSpores: {
 	DisplayName: Nano Spores
-	Tooltip: ""
+	Tooltip: Fibrous technocyte tumour. Handle Infested tissue with caution.
 }
 
 resource_NeuralSensor: {
 	DisplayName: Neural Sensor
-	Tooltip: ""
+	Tooltip: Implanted neural-link for controlling augmentations. Grineer design.
 }
 
 resource_OrokinCell: {
 	DisplayName: Orokin Cell
-	Tooltip: ""
+	Tooltip: Ancient energy cell from the Orokin era.
 }
 
 resource_Plastids: {
 	DisplayName: Plastids
-	Tooltip: ""
+	Tooltip: A disgusting nanite-infested tissue mass.
 }
 
 resource_PolymerBundle: {
 	DisplayName: Polymer Bundle
-	Tooltip: ""
+	Tooltip: A hard, thermoplastic casing. Manufactured by Corpus.
 }
 
 resource_Rubedo: {
 	DisplayName: Rubedo
-	Tooltip: ""
+	Tooltip: A jagged crystalline ore. Gives off radiant energy.
 }
 
 resource_Salvage: {
 	DisplayName: Salvage
-	Tooltip: ""
+	Tooltip: High value metals collected from war salvage.
 }
 
 resource_VoidTraces: {
 	DisplayName: Void Traces
-	Tooltip: ""
+	Tooltip: A substance used to increase the power within Relics.
 }
 
 part_Chassis_Excalibur: {
@@ -115,5 +115,80 @@ blueprint_part_Neuroptics_Excalibur: {
 
 blueprint_part_Systems_Excalibur: {
 	DisplayName: Excalibur Systems Blueprint
+	Tooltip: ""
+}
+
+relic_Lith_EX2: {
+	DisplayName: Lith EX2 Relic
+	Tooltip: ""
+}
+
+resource_Gallium: {
+	DisplayName: Gallium
+	Tooltip: Soft metal used in microelectronics and energy weapons.
+}
+
+resource_Neurodes: {
+	DisplayName: Neurodes
+	Tooltip: Biotech sensor organ harvested from Infested entities.
+}
+
+blueprint_weapon_Boar: {
+	DisplayName: Boar Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Cernos: {
+	DisplayName: Cernos Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Paris: {
+	DisplayName: Paris Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Rubico: {
+	DisplayName: Rubico Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Tigris: {
+	DisplayName: Tigris Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Vectis: {
+	DisplayName: Vectis Blueprint
+	Tooltip: ""
+}
+
+weapon_Boar: {
+	DisplayName: Boar
+	Tooltip: ""
+}
+
+weapon_Tigris: {
+	DisplayName: Tigris
+	Tooltip: ""
+}
+
+weapon_Rubico: {
+	DisplayName: Rubico
+	Tooltip: ""
+}
+
+weapon_Vectis: {
+	DisplayName: Vectis
+	Tooltip: ""
+}
+
+weapon_Cernos: {
+	DisplayName: Cernos
+	Tooltip: ""
+}
+
+weapon_Paris: {
+	DisplayName: Paris
 	Tooltip: ""
 }

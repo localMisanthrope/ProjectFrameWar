@@ -17,13 +17,12 @@ namespace ProjectFrameWar.Content.Items.Bases
     }
 
     [Autoload(false)]
-    internal class Blueprint(BlueprintData data) : ModItem
+    internal class Blueprint(BlueprintData data, BlueprintCategory category) : ModItem
     {
         protected override bool CloneNewInstances => true;
 
         public override string Name => $"blueprint_{data.result}";
-
-        public override string Texture => "ProjectFrameWar/res/texture/blueprint_Back";
+        public override string Texture => $"{ProjectFrameWar.texPath}/blueprint_Back";
 
         public override void SetDefaults()
         {
@@ -31,6 +30,7 @@ namespace ProjectFrameWar.Content.Items.Bases
             {
                 x.data = data;
                 x.counts = new int[data.ingredients.Length];
+                x.category = category;
             });
 
             base.SetDefaults();
@@ -66,14 +66,14 @@ namespace ProjectFrameWar.Content.Items.Bases
 
                 foreach (var data in list)
                 {
-                    mod.AddContent(new Blueprint(data));
+                    mod.AddContent(new Blueprint(data, (BlueprintCategory)value));
                     count++;
                     subCount++;
                 }
 
                 subWatch.Stop();
 
-                mod.Logger.Info($"[FRAMEWAR]: Finished loading {value} Blueprints ({subCount}), took {watch.Elapsed.TotalMilliseconds} ms.");
+                mod.Logger.Info($"[FRAMEWAR]: Finished loading {value} Blueprints ({subCount}), took {subWatch.Elapsed.TotalMilliseconds} ms.");
             }
 
             watch.Stop();

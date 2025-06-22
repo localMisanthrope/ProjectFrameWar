@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Furis",
+    "damage": 5,
+    "criticalChance": 0.05,
+    "criticalDamage": 2.0,
+    "statusChance": 0.12
+  }
+]

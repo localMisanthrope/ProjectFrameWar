@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Rubico",
+    "damage": 50,
+    "criticalChance": 0.3,
+    "criticalDamage": 3.0,
+    "statusChance": 0.12
+  },
+  {
+    "name": "Vectis",
+    "damage": 50,
+    "criticalChance": 0.25,
+    "criticalDamage": 2.0,
+    "statusChance": 0.3
+  }
+]

@@ -1,4 +1,6 @@
 BlueprintResult: Result: {0} ({1})
+CriticalChance: Critical Chance: {0}%
+CriticalDamage: Critical Damage: {0}x
 DucatValue: Sell for {0} Ducats.
 FramePartDescription: The {0} component of the {1} Warframe.
 RelicDescription: A relic of the Orokin Era which holds Prime parts. Can only be opened with the power of the Void.
@@ -18,4 +20,15 @@ ResourceRarity: {
 	Uncommon: Uncommon
 	Rare: Rare
 	SpecialRare: Rare
+}
+
+StatusChance: Status Chance: {0}%
+
+WeaponType: {
+	Rifle: Rifle
+	Shotgun: Shotgun
+	Sniper: Sniper
+	Bow: Bow
+	Pistol: Pistol
+	Melee: Melee
 }

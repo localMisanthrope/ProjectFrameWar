@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Cernos",
+    "damage": 10,
+    "criticalChance": 0.36,
+    "criticalDamage": 2.0,
+    "statusChance": 0.18
+  },
+  {
+    "name": "Paris",
+    "damage": 10,
+    "criticalChance": 0.3,
+    "criticalDamage": 2.0,
+    "statusChance": 0.1
+  }
+]

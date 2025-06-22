@@ -97,13 +97,15 @@ namespace ProjectFrameWar.Core.Items
 
             item.SetNameOverride($"{data.era} {data.name} Relic ({state})");
 
+            tooltips.Add(new(Mod, "DescriptionLine", Language.GetTextValue($"{LOCAL_KEY}.RelicDescription")));
+
             for (int i = 0; i < data.rewards.Length; i++)
             {
                 float percentage = rewardPercentages[(int)GetItemRarity(i)];
 
                 Item reward = ItemExtensions.GetItem(data.rewards[i]);
 
-                tooltips.Add(new(Mod, $"RewardLine_{i}", $"{reward.TextIcon()} {reward.Name} ({percentage.ToString("N", new NumberFormatInfo() { NumberDecimalDigits = 2 })}%)")
+                tooltips.Add(new(Mod, $"RewardLine_{i}", $"{reward.TextIcon()} {reward.Name} ({percentage.FormatAsPercent(2)}%)")
                 {
                     OverrideColor = GetItemRarity(i) switch 
                     { 

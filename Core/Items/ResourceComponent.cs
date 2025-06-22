@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace ProjectFrameWar.Core.Items
@@ -20,7 +21,7 @@ namespace ProjectFrameWar.Core.Items
 
         public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            tooltips.Add(new(Mod, "RarityLine", ""));
+            tooltips.Add(new(Mod, "RarityLine", Language.GetTextValue($"{LOCAL_KEY}.ResourceRarity.{rarity}")));
         }
     }
 }

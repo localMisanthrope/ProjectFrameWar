@@ -8,14 +8,14 @@ namespace ProjectFrameWar.Core
 {
     struct FrameData
     {
-        public string name;
-        public int health;
-        public int shield;
-        public int armor;
-        public int energy;
-        public float sprint;
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public int Shield { get; set; }
+        public int Armor { get; set; }
+        public int Energy { get; set; }
+        public float Sprint { get; set; }
 
-        public bool prime;
+        public bool Prime { get; set; }
     }
 
     internal class FrameLoader : ILoadable

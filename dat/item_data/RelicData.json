@@ -3,5 +3,10 @@
     "name": "EX1",
     "era": 0,
     "rewards": [ "resource_AlloyPlate", "resource_Rubedo", "resource_Plastids", "resource_PolymerBundle", "resource_ControlModule", "part_Neuroptics_Excalibur" ]
+  },
+  {
+    "name": "EX2",
+    "era": 0,
+    "rewards": [ "resource_NanoSpores", "resource_Ferrite", "resource_Salvage", "resource_NeuralSensor", "resource_ArgonCrystal", "part_Chassis_Excalibur" ]
   }
 ]

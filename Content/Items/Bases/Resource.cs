@@ -19,9 +19,7 @@ namespace ProjectFrameWar.Content.Items.Bases
         protected override bool CloneNewInstances => true;
 
         public override string Name => $"resource_{data.name}";
-        public override string Texture 
-            => ModContent.RequestIfExists<Texture2D>($"{ProjectFrameWar.texPath}/resources/{Name}", out var asset) ? 
-            $"{Mod.Name}/" + asset.Name : ProjectFrameWar.placeholderPath;
+        public override string Texture => MiscHelpers.CheckTexturePath(Mod, $"{ProjectFrameWar.texPath}/resources/{Name}");
 
         public override void SetDefaults()
         {

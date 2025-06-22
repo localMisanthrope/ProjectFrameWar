@@ -21,7 +21,6 @@ namespace ProjectFrameWar.Content.Items.Bases
         protected override bool CloneNewInstances => true;
 
         public override string Name => $"relic_{data.era}_{data.name}";
-
         public override string Texture => ProjectFrameWar.placeholderPath;
 
         public override void SetDefaults()

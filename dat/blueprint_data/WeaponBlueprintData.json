@@ -1,0 +1,56 @@
+[
+  {
+    "result": "weapon_Boar",
+    "ingredients": [ "resource_Morphics", "resource_AlloyPlate", "resource_Salvage", "resource_Plastids" ],
+    "requirements": [ 6, 900, 750, 900 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Boltor",
+    "ingredients": [ "resource_Neurodes", "resource_AlloyPlate", "resource_Salvage", "resource_PolymerBundle" ],
+    "requirements": [ 2, 100, 900, 600 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Cernos",
+    "ingredients": [ "resource_Gallium", "resource_Plastids", "resource_PolymerBundle", "resource_Ferrite" ],
+    "requirements": [ 3, 700, 600, 1750 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Furis",
+    "ingredients": [ "resource_Ferrite", "resource_AlloyPlate", "resource_Salvage", "resource_Neurodes" ],
+    "requirements": [ 750, 300, 400, 4 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Paris",
+    "ingredients": [ "resource_Morphics", "resource_Plastids", "resource_PolymerBundle", "resource_NanoSpores" ],
+    "requirements": [ 3, 600, 700, 2000 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Rubico",
+    "ingredients": [ "resource_Salvage", "resource_PolymerBundle", "resource_Rubedo", "resource_ArgonCrystal" ],
+    "requirements": [ 3800, 1300, 900, 2 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Soma",
+    "ingredients": [ "resource_Morphics", "resource_Plastids", "resource_Rubedo", "resource_Salvage" ],
+    "requirements": [ 7, 850, 1200, 8000 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Tigris",
+    "ingredients": [ "resource_OrokinCell", "resource_Circuits", "resource_Salvage", "resource_Rubedo" ],
+    "requirements": [ 3, 900, 1200, 1200 ],
+    "resultAmount": 1
+  },
+  {
+    "result": "weapon_Vectis",
+    "ingredients": [ "resource_Neurodes", "resource_OrokinCell", "resource_NanoSpores", "resource_Rubedo" ],
+    "requirements": [ 4, 4, 3000, 2500 ],
+    "resultAmount": 1
+  }
+]

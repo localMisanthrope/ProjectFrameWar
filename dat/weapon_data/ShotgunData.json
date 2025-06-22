@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Boar",
+    "damage": 25,
+    "criticalChance": 0.1,
+    "criticalDamage": 1.5,
+    "statusChance": 0.075
+  },
+  {
+    "name": "Tigris",
+    "damage": 25,
+    "criticalChance": 0.1,
+    "criticalDamage": 2.0,
+    "statusChance": 0.168
+  }
+]

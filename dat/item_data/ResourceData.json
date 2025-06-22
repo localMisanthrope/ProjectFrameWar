@@ -20,6 +20,10 @@
     "rarity": 0
   },
   {
+    "name": "Gallium",
+    "rarity": 2
+  },
+  {
     "name": "Morphics",
     "rarity": 2
   },
@@ -29,6 +33,10 @@
   },
   {
     "name": "NeuralSensor",
+    "rarity": 2
+  },
+  {
+    "name": "Neurodes",
     "rarity": 2
   },
   {
