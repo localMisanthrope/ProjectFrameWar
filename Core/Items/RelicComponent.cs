@@ -68,7 +68,7 @@ namespace ProjectFrameWar.Core.Items
 
         public void DispenseRelicReward(Player player)
         {
-            int[] percentageArr = new int[data.rewards.Length];
+            int[] percentageArr = new int[data.Rewards.Length];
             for (int i = 0; i < percentageArr.Length; i++)
                 percentageArr[i] = (int)(rewardPercentages[(int)GetItemRarity(i)] * 100);
 
@@ -83,7 +83,7 @@ namespace ProjectFrameWar.Core.Items
 
                 else
                 {
-                    player.QuickSpawnItem(new EntitySource_Gift(player), ItemExtensions.GetItem(data.rewards[i]));
+                    player.QuickSpawnItem(new EntitySource_Gift(player), ItemExtensions.GetItem(data.Rewards[i]));
                     player.QuickSpawnItem(new EntitySource_Gift(player), ItemExtensions.GetItem("resource_VoidTraces"), Main.rand.Next(6, 26));
                     break;
                 }
@@ -95,15 +95,15 @@ namespace ProjectFrameWar.Core.Items
             string state = Language.GetText($"{LOCAL_KEY}.RelicState.{refinement}").Value;
             string nextState = Language.GetText($"{LOCAL_KEY}.RelicState.{refinement.NextEnum()}").Value;
 
-            item.SetNameOverride($"{data.era} {data.name} Relic ({state})");
+            item.SetNameOverride($"{data.Era} {data.Name} Relic ({state})");
 
             tooltips.Add(new(Mod, "DescriptionLine", Language.GetTextValue($"{LOCAL_KEY}.RelicDescription")));
 
-            for (int i = 0; i < data.rewards.Length; i++)
+            for (int i = 0; i < data.Rewards.Length; i++)
             {
                 float percentage = rewardPercentages[(int)GetItemRarity(i)];
 
-                Item reward = ItemExtensions.GetItem(data.rewards[i]);
+                Item reward = ItemExtensions.GetItem(data.Rewards[i]);
 
                 tooltips.Add(new(Mod, $"RewardLine_{i}", $"{reward.TextIcon()} {reward.Name} ({percentage.FormatAsPercent(2)}%)")
                 {
@@ -111,7 +111,8 @@ namespace ProjectFrameWar.Core.Items
                     { 
                         RelicRewardRarity.Common => Color.SandyBrown,
                         RelicRewardRarity.Uncommon => Color.Silver,
-                        RelicRewardRarity.Rare => Color.Goldenrod
+                        RelicRewardRarity.Rare => Color.Goldenrod,
+                        _ => Color.SandyBrown
                     }
                 });
             }
@@ -135,7 +136,7 @@ namespace ProjectFrameWar.Core.Items
 
         public override void Component_PostDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Asset<Texture2D> sheet = ModContent.Request<Texture2D>($"ProjectFrameWar/res/texture/relic_{data.era}_Sheet");
+            Asset<Texture2D> sheet = ModContent.Request<Texture2D>($"ProjectFrameWar/res/texture/relic_{data.Era}_Sheet");
             var sheetFrame = sheet.Frame(horizontalFrames: 4, frameX: (int)refinement);
             var sheetOrig = sheetFrame.Size() / 2;
 

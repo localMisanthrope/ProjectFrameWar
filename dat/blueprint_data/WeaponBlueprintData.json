@@ -1,8 +1,8 @@
 [
   {
     "result": "weapon_Akbronco",
-    "ingredients": [ "weapon_Bronco", "weapon_Bronco", "resource_OrokinCell" ],
-    "requirements": [ 1, 1, 1, 0 ],
+    "ingredients": [ "weapon_Bronco", "resource_OrokinCell" ],
+    "requirements": [ 2, 1, 0, 0 ],
     "resultAmount": 1,
     "craftTime": 600
   },

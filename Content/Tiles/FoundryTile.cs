@@ -38,6 +38,28 @@ namespace ProjectFrameWar.Content.Tiles
             AddMapEntry(Color.AliceBlue);
         }
 
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            var pos = new Point16(i, j).ToVector2();
+
+            if (!TileEntity.TryGet(i, j, out FoundryTileEntity tile))
+                return;
+
+            if (closer && tile.IsWorking)
+            {
+                if (Main.rand.NextBool(240))
+                {
+                    string rand = $"{ProjectFrameWar.sfxPath}/tiles/foundry/foundry_Spark{Main.rand.Next(1, 6)}";
+                    SoundEngine.PlaySound(new SoundStyle (rand) with { Volume = Main.rand.NextFloat(0.5f, 1f) }, pos * 16);
+
+                    int dustAmount = Main.rand.Next(2, 8);
+
+                    for (int k = 0; k < dustAmount; k++)
+                        Dust.NewDust(pos * 16, 10, 10, DustID.TreasureSparkle);
+                }
+            }
+        }
+
         public override bool RightClick(int i, int j)
         {
             var player = Main.LocalPlayer;
@@ -99,6 +121,8 @@ namespace ProjectFrameWar.Content.Tiles
     {
         public List<Item> blueprintQueue = [];
 
+        public bool IsWorking => blueprintQueue.Any(x => x.TryGetComponent(out BlueprintComponent component) && !component.CanCollect && component.craftTimer > 0);
+
         public bool HasCompleted => blueprintQueue.Any(x => x.TryGetComponent(out BlueprintComponent component) && component.CanCollect);
 
         public override bool IsTileValidForEntity(int x, int y)
@@ -130,14 +154,6 @@ namespace ProjectFrameWar.Content.Tiles
                         if (blueprint.craftTimer == blueprint.data.CraftTime)
                             Main.NewText($"[Foundry]: {Main.LocalPlayer.name}, {item.Name} has finished crafting! Come claim it now!");
                     }
-
-                    SoundStyle style = new($"{ProjectFrameWar.sfxPath}/tiles/foundry/foundry_Spark{Main.rand.Next(1, 6)}");
-                    int dustCount = Main.rand.Next(5, 15);
-
-                    for (int i = 0; i < dustCount; i++)
-                        Dust.NewDust(Position.ToVector2(), 20, 20, DustID.MinecartSpark);
-
-                    SoundEngine.PlaySound(style, position: Position.ToVector2());
                 }
             }
 

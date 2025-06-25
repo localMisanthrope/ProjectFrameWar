@@ -9,8 +9,8 @@ namespace ProjectFrameWar.Content.Items.Bases
 {
     struct ResourceData
     {
-        public string name;
-        public ResourceRarity rarity;
+        public string Name { get; set; }
+        public ResourceRarity Rarity { get; set; }
     }
 
     [Autoload(false)]
@@ -18,12 +18,12 @@ namespace ProjectFrameWar.Content.Items.Bases
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Name => $"resource_{data.name}";
+        public override string Name => $"resource_{data.Name}";
         public override string Texture => MiscHelpers.CheckTexturePath(Mod, $"{ProjectFrameWar.texPath}/resources/{Name}");
 
         public override void SetDefaults()
         {
-            Item.TryEnableComponent<ResourceComponent>(x => x.rarity = data.rarity);
+            Item.TryEnableComponent<ResourceComponent>(x => x.rarity = data.Rarity);
 
             base.SetDefaults();
         }

@@ -17,13 +17,22 @@ namespace ProjectFrameWar.Core.Systems
 
         public override void UpdateUI(GameTime gameTime)
         {
-            if (doTitleChange && --_windowTimer <= 0)
+            _windowTimer--;
+
+            if (doTitleChange && _windowTimer <= 0)
             {
                 Main.instance.Window.Title = "[FRAMEWAR]: " + Language.GetText($"{LOCAL_KEY}.WindowTitle{Main.rand.Next(11)}").Value;
                 _windowTimer = WINDOW_TIMER_MAX;
             }
 
             base.UpdateUI(gameTime);
+        }
+
+        public override void Load()
+        {
+            doTitleChange = true;
+
+            base.Load();
         }
     }
 }

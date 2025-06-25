@@ -20,6 +20,11 @@ If things look and feel different, [b]they probably are[/b]!
 At this time, I will not be considering compatibility with any mods. If you would like to enable this, consider supporting it yourself through modpacks.
 As for companion and addon mods, I am working on facilitating cross-mod capabilities. Stay tuned!
 
+[h2]MULTIPLAYER DISCLAIMER[/h2]
+This mod is slated to be a Singleplayer mod; meaning networking and Multiplayer will come in patches much later in development.
+Playing this mod in Multiplayer is bound to be riddled with bugs to potentially game breaking crashes.
+You have been warned ahead of time!
+
 Translation Help:
 If you'd like to contribute translations for the content in this mod, please visit my Discord server. (Link pending)
 

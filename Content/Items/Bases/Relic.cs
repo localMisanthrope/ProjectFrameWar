@@ -8,9 +8,9 @@ namespace ProjectFrameWar.Content.Items.Bases
 {
     struct RelicData
     {
-        public string name;
-        public RelicEra era;
-        public string[] rewards;
+        public string Name { get; set; }
+        public RelicEra Era { get; set; }
+        public string[] Rewards { get; set; }
 
         public const int MAX_REWARDS = 6;
     }
@@ -20,7 +20,7 @@ namespace ProjectFrameWar.Content.Items.Bases
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Name => $"relic_{data.era}_{data.name}";
+        public override string Name => $"relic_{data.Era}_{data.Name}";
         public override string Texture => ProjectFrameWar.placeholderPath;
 
         public override void SetDefaults()
