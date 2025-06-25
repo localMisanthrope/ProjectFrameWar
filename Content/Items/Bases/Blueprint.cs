@@ -10,10 +10,11 @@ namespace ProjectFrameWar.Content.Items.Bases
 {
     struct BlueprintData
     {
-        public string[] ingredients;
-        public int[] requirements;
-        public string result;
-        public int resultAmount;
+        public string[] Ingredients { get; set; }
+        public int[] Requirements { get; set; }
+        public string Result { get; set; }
+        public int ResultAmount { get; set; }
+        public int CraftTime { get; set; }
     }
 
     [Autoload(false)]
@@ -21,7 +22,7 @@ namespace ProjectFrameWar.Content.Items.Bases
     {
         protected override bool CloneNewInstances => true;
 
-        public override string Name => $"blueprint_{data.result}";
+        public override string Name => $"blueprint_{data.Result}";
         public override string Texture => $"{ProjectFrameWar.texPath}/blueprint_Back";
 
         public override void SetDefaults()
@@ -29,8 +30,9 @@ namespace ProjectFrameWar.Content.Items.Bases
             Item.TryEnableComponent<BlueprintComponent>(x =>
             {
                 x.data = data;
-                x.counts = new int[data.ingredients.Length];
+                x.counts = new int[data.Ingredients.Length];
                 x.category = category;
+                x.craftTimer = 0;
             });
 
             base.SetDefaults();

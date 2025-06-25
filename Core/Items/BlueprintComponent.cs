@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace ProjectFrameWar.Core.Items
 {
@@ -21,22 +22,41 @@ namespace ProjectFrameWar.Core.Items
     {
         internal BlueprintData data;
 
+        public bool CanCraft => CanCraftMe();
+
         internal int[] counts;
+
+        public int craftTimer;
+
+        public bool CanCollect => craftTimer >= data.CraftTime;
 
         internal BlueprintCategory category;
 
-        public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        internal bool CanCraftMe()
         {
-            for (int i = 0; i < data.ingredients.Length; i++)
-            {
-                if (data.ingredients[i] is null)
-                    continue;
+            int count = 0;
 
-                var ingr = ItemExtensions.GetItem(data.ingredients[i]);
-                tooltips.Add(new(Mod, $"Ingredient_{i}", $"{ingr.TextIcon()} {ingr.Name}: {counts[i]}/{data.requirements[i]}"));
+            for (int i = 0; i < data.Ingredients.Length; i++)
+            {
+                if (counts[i] >= data.Requirements[i])
+                    count++;
             }
 
-            tooltips.Add(new(Mod, "ResultLine", $"\n {Language.GetText($"{LOCAL_KEY}.BlueprintResult").Format(ItemExtensions.GetItem(data.result).TextIcon(), data.resultAmount)}"));
+            return count >= data.Ingredients.Length;
+        }
+
+        public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            for (int i = 0; i < data.Ingredients.Length; i++)
+            {
+                if (data.Ingredients[i] is null)
+                    continue;
+
+                var ingr = ItemExtensions.GetItem(data.Ingredients[i]);
+                tooltips.Add(new(Mod, $"Ingredient_{i}", $"{ingr.TextIcon()} {ingr.Name}: {counts[i]}/{data.Requirements[i]}"));
+            }
+
+            tooltips.Add(new(Mod, "ResultLine", $"\n {Language.GetText($"{LOCAL_KEY}.BlueprintResult").Format(ItemExtensions.GetItem(data.Result).TextIcon(), data.ResultAmount)}"));
         }
 
         public override void Component_PostDrawInv(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
@@ -44,10 +64,16 @@ namespace ProjectFrameWar.Core.Items
             //To-Do: Draw reward.
         }
 
+        public override void Component_SaveData(Item item, TagCompound tag) => tag[nameof(craftTimer)] = craftTimer;
+        public override void Component_LoadData(Item item, TagCompound tag) => craftTimer = tag.GetInt(nameof(craftTimer));
+
         public override void Component_UpdateInventory(Item item, Player player)
         {
             for (int i = 0; i < counts.Length; i++)
-                counts[i] = player.CountFromInventory(ItemExtensions.GetItem(data.ingredients[i]).type);
+            {
+                counts[i] = player.CountFromInventory(ItemExtensions.GetItem(data.Ingredients[i]).type);
+            }
+               
         }
     }
 }

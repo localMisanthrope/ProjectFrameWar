@@ -192,3 +192,73 @@ weapon_Paris: {
 	DisplayName: Paris
 	Tooltip: ""
 }
+
+blueprint_weapon_Boltor: {
+	Tooltip: ""
+	DisplayName: Boltor Blueprint
+}
+
+blueprint_weapon_Bronco: {
+	DisplayName: Bronco Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Furis: {
+	DisplayName: Furis Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Soma: {
+	DisplayName: Soma Blueprint
+	Tooltip: ""
+}
+
+weapon_Boltor: {
+	DisplayName: Boltor
+	Tooltip: ""
+}
+
+weapon_Soma: {
+	DisplayName: Soma
+	Tooltip: ""
+}
+
+weapon_Bronco: {
+	DisplayName: Bronco
+	Tooltip: ""
+}
+
+weapon_Furis: {
+	DisplayName: Furis
+	Tooltip: ""
+}
+
+tile_Item_Foundry: {
+	DisplayName: Foundry
+	Tooltip: ""
+}
+
+blueprint_part_Chassis_Rhino: {
+	DisplayName: Rhino Chassis Blueprint
+	Tooltip: ""
+}
+
+blueprint_part_Neuroptics_Rhino: {
+	DisplayName: Rhino Neuroptics Blueprint
+	Tooltip: ""
+}
+
+blueprint_part_Systems_Rhino: {
+	DisplayName: Rhino Systems Blueprint
+	Tooltip: ""
+}
+
+blueprint_weapon_Akbronco: {
+	DisplayName: Akbronco Blueprint
+	Tooltip: ""
+}
+
+weapon_Akbronco: {
+	DisplayName: Akbronco
+	Tooltip: ""
+}

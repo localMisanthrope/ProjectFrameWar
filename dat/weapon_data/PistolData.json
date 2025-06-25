@@ -1,5 +1,19 @@
 [
   {
+    "name": "Akbronco",
+    "damage": 5,
+    "criticalChance": 0.06,
+    "criticalDamage": 2.0,
+    "statusChance": 0.0314
+  },
+  {
+    "name": "Bronco",
+    "damage": 5,
+    "criticalChance": 0.06,
+    "criticalDamage": 2.0,
+    "statusChance": 0.0943
+  },
+  {
     "name": "Furis",
     "damage": 5,
     "criticalChance": 0.05,

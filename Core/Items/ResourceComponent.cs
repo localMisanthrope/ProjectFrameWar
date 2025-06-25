@@ -17,7 +17,7 @@ namespace ProjectFrameWar.Core.Items
     {
         public ResourceRarity rarity;
 
-        public override void Component_SetDefaults(Item item) => item.maxStack = int.MaxValue;
+        public override void Component_SetDefaults(Item item) => item.maxStack = 1000;
 
         public override void Component_ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {

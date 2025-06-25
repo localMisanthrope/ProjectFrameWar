@@ -1,7 +1,6 @@
 ﻿using ProjectFrameWar.Content.Items.Bases;
 using ProjectFrameWar.Core.Extensions;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using Terraria;
 using Terraria.Localization;
@@ -41,6 +40,9 @@ namespace ProjectFrameWar.Core.Items
 
         public override void Component_UpdateInventory(Item item, Player player)
         {
+            if (!item.GetAllComponents().Any(x => x.Name == $"{data.Name}Component"))
+                return;
+
             if ((player.HeldItem != item || Main.mouseItem != item) && item.GetAllComponents().First(x => x.Name == $"{data.Name}Component").Enabled)
                 item.TryDisableComponent(data.Name);
 
