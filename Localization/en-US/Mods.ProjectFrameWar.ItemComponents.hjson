@@ -1,8 +1,10 @@
 BlueprintResult: Result: {0} ({1})
 CriticalChance: Critical Chance: {0}%
 CriticalDamage: Critical Damage: {0}x
+DecayDescription: Unstable Material: This material destabilizes outside of its natural environment.
 DucatValue: Sell for {0} Ducats.
 FramePartDescription: The {0} component of the {1} Warframe.
+InfectionDescription: Infested Material: Vulnerable to the Technocyte Virus while holding.
 RelicDescription: A relic of the Orokin Era which holds Prime parts. Can only be opened with the power of the Void.
 
 RelicState: {

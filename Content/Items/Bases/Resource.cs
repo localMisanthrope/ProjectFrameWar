@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using ProjectFrameWar.Core.Extensions;
+﻿using ProjectFrameWar.Core.Extensions;
 using ProjectFrameWar.Core.Helpers;
 using ProjectFrameWar.Core.Items;
 using System.Diagnostics;
@@ -11,6 +10,8 @@ namespace ProjectFrameWar.Content.Items.Bases
     {
         public string Name { get; set; }
         public ResourceRarity Rarity { get; set; }
+        public bool InfestedMaterial { get; set; }
+        public int DecayRate { get; set; }
     }
 
     [Autoload(false)]
@@ -24,6 +25,12 @@ namespace ProjectFrameWar.Content.Items.Bases
         public override void SetDefaults()
         {
             Item.TryEnableComponent<ResourceComponent>(x => x.rarity = data.Rarity);
+
+            if (data.InfestedMaterial)
+                Item.TryEnableComponent<InfectionComponent>();
+
+            if (data.DecayRate > -1)
+                Item.TryEnableComponent<DecayComponent>(x => x.decayRate = data.DecayRate);
 
             base.SetDefaults();
         }

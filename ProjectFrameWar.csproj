@@ -15,6 +15,10 @@
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Stalker.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.Tiles.hjson" />
 	  <None Remove="localization\en-us\Mods.ProjectFrameWar.WIndowTitles.hjson" />
+	  <None Remove="localization\it-it\Mods.ProjectFramewar.ItemComponents.hjson" />
+	  <None Remove="localization\it-it\Mods.ProjectFrameWar.Items.hjson" />
+	  <None Remove="Localization\pt-BR\Mods.ProjectFramewar.ItemComponents.hjson" />
+	  <None Remove="Localization\pt-BR\Mods.ProjectFrameWar.Items.hjson" />
 	  <None Remove="res\texture\blueprint_back.png" />
 	  <None Remove="res\texture\placeholder.png" />
 	  <None Remove="res\texture\resources\excalibur_MapHead.png" />
@@ -39,6 +43,8 @@
 
 	<!-- References -->
 	<ItemGroup>
+	  <Folder Include="Content\StatusEffects\InfectionMutations\" />
+	  <Folder Include="Localization\it-IT\" />
 	  <Folder Include="res\sound\ambient\" />
 	  <Folder Include="res\sound\items\pickups\" />
 	  <Folder Include="res\sound\warframes\excalibur\" />

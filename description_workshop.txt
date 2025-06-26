@@ -1,4 +1,4 @@
-[h1]WARFRAME, The Mod[/h1]
+﻿[h1]WARFRAME, The Mod[/h1]
 
 Developed by local_misanthrope.
 
@@ -25,7 +25,7 @@ This mod is slated to be a Singleplayer mod; meaning networking and Multiplayer 
 Playing this mod in Multiplayer is bound to be riddled with bugs to potentially game breaking crashes.
 You have been warned ahead of time!
 
-Translation Help:
+[h2]TRANSLATION ASSISTANCE[/h2]
 If you'd like to contribute translations for the content in this mod, please visit my Discord server. (Link pending)
 
 Current languages needed:
@@ -33,9 +33,9 @@ Current languages needed:
 - es-ES / Espanol
 - fr-FR / Francois
 - it-IT / Italiano
-- pt-BR / Brazilian Portuguese
-- pl-PR / Polish
-- ru-RU / Russian
+- pt-BR / Português Brasileiro
+- pl-PR / Polski
+- ru-RU / русский
 - zH-Hans / Chinese (Simplified)
 
 All assets, names and likenesses belong in full to Digital Extremes. 

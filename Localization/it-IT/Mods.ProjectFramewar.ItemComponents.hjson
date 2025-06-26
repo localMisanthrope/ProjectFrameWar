@@ -1,0 +1,28 @@
+BlueprintResult: Risultato: {0}
+CriticalChance: Probabilità Critico: {0}%
+CriticalDamage: Danno Critico: {0}x
+
+RelicState: {
+	Intact: Intatto
+	Exceptional: Eccezionale
+	Flawless: Impeccabile
+	Radiant: Radiante
+}
+
+ResourceRarity: {
+	Common: Comune
+	Uncommon: Non Comune
+	Rare: Raro
+	SpecialRare: Raro
+}
+
+StatusChance: Probabilità Stato: {0}%
+
+WeaponType: {
+	Rifle: Fucile
+	Shotgun: Fucile a Pompa
+	Sniper: Fucile de Cecchino
+	Bow: Arco
+	Pistol: Pistola
+	Melee: Mischia
+}

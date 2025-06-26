@@ -1,66 +1,98 @@
 [
   {
     "name": "AlloyPlate",
-    "rarity": 0
+    "rarity": 0,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "ArgonCrystal",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": 1200
   },
   {
     "name": "Circuits",
-    "rarity": 1
+    "rarity": 1,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "ControlModule",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Ferrite",
-    "rarity": 0
+    "rarity": 0,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Gallium",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Morphics",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "NanoSpores",
-    "rarity": 0
+    "rarity": 0,
+    "canInfect": true,
+    "decayRate": -1
   },
   {
     "name": "NeuralSensor",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Neurodes",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": true,
+    "decayRate": -1
   },
   {
     "name": "OrokinCell",
-    "rarity": 2
+    "rarity": 2,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Plastids",
-    "rarity": 1
+    "rarity": 1,
+    "canInfect": true,
+    "decayRate": -1
   },
   {
     "name": "PolymerBundle",
-    "rarity": 1
+    "rarity": 1,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Rubedo",
-    "rarity": 1
+    "rarity": 1,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "Salvage",
-    "rarity": 0
+    "rarity": 0,
+    "canInfect": false,
+    "decayRate": -1
   },
   {
     "name": "VoidTraces",
-    "rarity": 1
+    "rarity": 1,
+    "canInfect": false,
+    "decayRate": -1
   }
 ]
